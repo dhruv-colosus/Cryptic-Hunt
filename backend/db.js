@@ -1,29 +1,23 @@
-const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
 
-// Connection URL
-const url = "mongodb://localhost:27017";
-
-// Database Name
-const dbName = "cryptichunt";
-
-// Create a new MongoClient
-const client = new MongoClient(url, { useUnifiedTopology: true });
-
-// Connect to the MongoDB server
-async function connectToMongoDB() {
+const connectToMongoDB = async () => {
   try {
-    // Connect to the client
-    await client.connect();
-    console.log("Connected to the MongoDB server");
+    // Connection URL
+    const url = "mongodb://localhost:27017/cryptichunt";
 
-    // Select the database
-    const db = client.db(dbName);
+    // Connection options
+    const options = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    };
 
-    // Perform database operations
-    // ...
+    // Connect to MongoDB
+    await mongoose.connect(url, options);
+
+    console.log("Connected to MongoDB");
   } catch (error) {
-    console.error("Error connecting to the MongoDB server:", error);
+    console.error("Error connecting to MongoDB:", error);
   }
-}
+};
 
 module.exports = { connectToMongoDB };
