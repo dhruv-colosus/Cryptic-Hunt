@@ -25,6 +25,7 @@ module.exports = {
       heading: ["Autom"],
       sub: ["Fira Code"],
       button: ["Upheavel"],
+      montserrat : ['Montserrat' , 'sans-serif'],
     },
     extend: {
       backgroundImage: {

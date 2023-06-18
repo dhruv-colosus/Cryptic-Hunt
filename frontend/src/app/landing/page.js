@@ -25,7 +25,7 @@ export default function Home() {
           <div className=" flex items-center pr-4">
             <a href="#">
               <div className="bg-[#00C29A] py-2 px-10 ">
-                <h2 className=" font-autom text-[#OBOBOB] text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg transition-all duration-300">
+                <h2 className=" font-heading text-[#OBOBOB] text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg transition-all duration-300">
                   LOGIN
                 </h2>
               </div>
@@ -45,7 +45,7 @@ export default function Home() {
           {/* main heading */}
           <div>
             <div >
-              <h1 className="text-[#00C29A] font-autom text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">
+              <h1 className="text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">
                 CRYPTIC HUNT
               </h1>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="bg-[#00C29A]">
             <a href="#">
               <div className="py-2 px-12">
-                <h2 className="text-[#OBOBOB] font-bold font-autom text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl transition-all duration-300"> 
+                <h2 className="text-[#OBOBOB] font-bold font-heading text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl transition-all duration-300"> 
                   PLAY
                 </h2>
               </div>
@@ -93,7 +93,7 @@ export default function Home() {
                hover:w-[10.75rem] sm:hover:w-[14.25rem] md:hover:w-[14.25rem] lg:hover:w-[14.25rem] xl:hover:w-[14.25rem] hover:bg-[#000000] hover:border-2 hover:border-[#00C29A] transition-all duration-300 text-[#00C29A]">
                   <Image src={"/images/rulebook.png"} width={100} height={100} alt="Rulebook" loading="eager" className="w-6 sm:w-10 md:w-10 lg:w-10 xl:w-10 ">
                   </Image>
-                <span className="pl-4 font-autom text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
+                <span className="pl-4 font-heading text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
                   RULEBOOK
                 </span>
               </div>
@@ -106,7 +106,7 @@ export default function Home() {
               hover:w-[12.5rem] sm:hover:w-[16.75rem] md:hover:w-[16.75rem] lg:hover:w-[16.75rem] xl:hover:w-[16.75rem]  hover:bg-[#000000] hover:border-2 hover:border-[#00C29A] transition-all duration-300 text-[#00C29A]">
                   <Image src={"/images/trophy.png"} width={100} height={100} alt="Rulebook" loading="eager" className="w-6 sm:w-10 md:w-10 lg:w-10 xl:w-10">
                   </Image>
-                <span className="pl-4 font-autom text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
+                <span className="pl-4 font-heading text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
                   LEADERBOARD
                 </span>
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
                   </Image>
 
                   
-                <span className="pl-4 font-autom text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
+                <span className="pl-4 font-heading text-xs sm:text-lg md:text-lg lg:text-lg xl:text-lg">
                   MONKEY
                 </span>
               </div>
