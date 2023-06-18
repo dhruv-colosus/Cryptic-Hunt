@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <nav className="w-full sticky top-0 px-2 pt-2 bg-background">
-      <div className="container mx-auto  flex justify-between h-8 lg:h-12">
+    <nav className="w-full sticky top-0 px-2 pt-4 bg-background">
+      <div className="container mx-auto  flex justify-between h-6 lg:h-10">
         <Link href="/">
           <Image
             src={"/images/Logo_dark_white.png"}
             width={200}
             height={50}
-            className="  w-auto h-full"
+            className="  w-auto h-full "
           />
         </Link>
 
