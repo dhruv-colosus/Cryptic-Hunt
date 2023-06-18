@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Questions from "./play/Questions";
 
 export default function Home() {
   return (
