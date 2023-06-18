@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectToMongoDB = async () => {
   try {
     // Connection URL
-    const url = "mongodb://localhost:27017/cryptichunt";
+    const url = process.env.MONGO_URI;
 
     // Connection options
     const options = {

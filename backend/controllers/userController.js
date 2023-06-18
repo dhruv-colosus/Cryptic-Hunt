@@ -120,6 +120,7 @@ const checkQuestion = asyncHandler(async (req, res) => {
     const { answer } = req.body;
     const { level } = user;
     const question = await Questions.findOne({ level: level });
+
     if (!question) {
       res.status(404);
       throw new Error("Question not found");
@@ -127,7 +128,15 @@ const checkQuestion = asyncHandler(async (req, res) => {
 
     const isAnswerCorrect = question.answer === answer;
 
+    if (isAnswerCorrect) {
+      user.level = req.body.level + 1 || user.level + 1;
+      user.score = req.body.score * 2 || (1 + user.score) * 2;
+    }
+    const updatedUser = await user.save();
+
     const response = {
+      _id: updatedUser ? updatedUser._id : user._id,
+      username: updatedUser ? updatedUser.username : user.username,
       questionId: question._id,
       isAnswerCorrect: isAnswerCorrect ? true : false,
     };
@@ -163,11 +172,26 @@ const addQuestion = asyncHandler(async (req, res) => {
   }
 });
 
+const leaderboard = asyncHandler(async (req, res) => {
+  try {
+    const users = await User.find().sort({ score: -1 });
+    const formattedUsers = users.map((user) => ({
+      name: user.username,
+      score: user.score,
+    }));
+    res.json(formattedUsers);
+  } catch {
+    console.error(error);
+    res.status(500).json({ message: "Server Error" });
+  }
+});
+
 module.exports = {
   createUser,
   verifyUser,
-  levelUp,
   getQuestion,
   addQuestion,
   checkQuestion,
+  leaderboard,
+  levelUp,
 };

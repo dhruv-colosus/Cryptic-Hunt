@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import "../components/glitch.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,6 +28,20 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Automs";
+  src: url("/fonts/Autom-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Upheavel";
+  src: url("/fonts/UpheavalPro.ttf") format("truetype");
 }
 
 body {
