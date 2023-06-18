@@ -22,11 +22,11 @@ module.exports = {
       black: "#000000",
     },
     fontFamily: {
-      heading: ["Autom"],
-      sub: ["Fira Code"],
-      firaMedium: ["Fira Code Medium"],
-      button: ["Upheavel"],
-      montserrat : ['Montserrat' , 'sans-serif'],
+      heading: ["var(--font-autom)"],
+      sub: ["var(--font-fira-code)"],
+      button: ["var(--font-upheaval)"],
+      montserrat: ["var(--font-montserrat)"],
+      minecraftia: ["var(--font-minecraftia)"],
     },
     extend: {
       backgroundImage: {

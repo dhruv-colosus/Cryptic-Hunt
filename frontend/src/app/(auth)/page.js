@@ -1,46 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      {/* navbar */}
-      <nav className="bg-[#OBOBOB]">
-        <div className="flex justify-between my-4 mx-3 ">
-          {/* devcomm logo */}
-          <div>
-            <div className="py-1.5 px-4">
-              <div>
-                <a href="#">
-                  <Image
-                    src={"/images/Logo_dark_white.png"}
-                    alt="hello"
-                    width="1000"
-                    height="300"
-                    className=" w-[30vw] sm:w-[12vw] md:w-[12vw] lg:w-[12vw] xl:w-[12vw]"
-                  ></Image>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* devcomm logo ends */}
-          {/* login button */}
-
-          <div className=" flex items-center pr-4">
-            <button
-              type="submit"
-              className="font-bold font-heading text-xl block text-center outline-none bg-main text-white cursor-pointer transition  duration-300
-                sm:py-2 py-1 sm:px-12 px-10 border-2 border-main hover:bg-background hover:text-main
-                 onClick={login}"
-            >
-              LOGIN
-            </button>
-          </div>
-          {/* login button ends */}
-        </div>
-      </nav>
-      {/* navbar ends */}
-
       {/* body */}
 
       <div className="bg-[#OBOBOB] h-full my-[30vh] sm:mt-44 md:mt-44 lg:mt-44 xl:mt-44 transition-all duration-300">
@@ -100,7 +63,7 @@ export default function Home() {
           <div className="py-1">
             <a href="#">
               <div
-                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16 
+                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16
                hover:w-[10.75rem] sm:hover:w-[14.25rem] md:hover:w-[14.25rem] lg:hover:w-[14.25rem] xl:hover:w-[14.25rem] hover:bg-[#000000] hover:border-2 hover:border-[#00C29A] transition-all duration-300 text-[#00C29A]"
               >
                 <Image
@@ -119,9 +82,9 @@ export default function Home() {
           </div>
 
           <div className="py-1">
-            <a href="#">
+            <Link href="/leaderboard">
               <div
-                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16 
+                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16
               hover:w-[12.5rem] sm:hover:w-[16.75rem] md:hover:w-[16.75rem] lg:hover:w-[16.75rem] xl:hover:w-[16.75rem]  hover:bg-[#000000] hover:border-2 hover:border-[#00C29A] transition-all duration-300 text-[#00C29A]"
               >
                 <Image
@@ -136,13 +99,13 @@ export default function Home() {
                   LEADERBOARD
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="py-1">
             <a href="#">
               <div
-                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16 
+                className=" flex items-center overflow-hidden bg-[#00C29A] p-3 sm:p-3 md:p-3 lg:p-3 xl:p-3 w-10 sm:w-16 md:w-16 lg:w-16 xl:w-16 h-10 sm:h-16 md:h-16 lg:h-16 xl:h-16
               hover:w-[9.75rem] sm:hover:w-[12.9rem] md:hover:w-[12.9rem] lg:hover:w-[12.9rem] xl:hover:w-[12.9rem]  hover:bg-[#000000] hover:border-2 hover:border-[#00C29A] transition-all duration-300 text-[#00C29A]"
               >
                 <Image
