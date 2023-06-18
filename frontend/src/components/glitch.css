@@ -1,0 +1,30 @@
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  2%,
+  22%,
+  24% {
+    transform: translate(-2px, -2px);
+    color: #00c29a;
+    text-shadow: 2px 2px 4px #00c29a, -2px -2px 4px #000000;
+  }
+  4%,
+  26%,
+  28% {
+    transform: translate(2px, 2px);
+    color: #000000;
+    text-shadow: -2px -2px 4px #000000, 2px 2px 4px #00c29a;
+  }
+  6%,
+  30%,
+  32% {
+    transform: translate(-2px, 2px);
+    color: #00c29a;
+    text-shadow: 2px -2px 4px #00c29a, -2px 2px 4px #000000;
+  }
+}
+
+.glitch-text {
+  animation: glitch 5s infinite;
+}
