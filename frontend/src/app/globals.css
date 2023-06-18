@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"); */
 @import "../components/glitch.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}*/
+
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/*
 @font-face {
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Light.ttf") format("truetype");
@@ -28,17 +28,18 @@
   font-family: "Automs";
   src: url("/fonts/Autom-Bold.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Upheavel";
   src: url("/fonts/UpheavalPro.ttf") format("truetype");
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
