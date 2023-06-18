@@ -5,17 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-@font-face {
-  font-family: "Autom";
-  src: url("./Fonts/Autom-Bold.otf");
-}
-@font-face {
-  font-family: "Minecraftia";
-  src: url("./Fonts/Minecraftia-Regular.ttf");
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -34,6 +23,10 @@
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Fira Code Medium";
+  src: url("/fonts/FiraCode-Medium.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Automs";
@@ -42,6 +35,11 @@
 @font-face {
   font-family: "Upheavel";
   src: url("/fonts/UpheavalPro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Minecraftia";
+  src: url("/fonts/Minecraftia-Regular.ttf") format("truetype");
 }
 
 body {

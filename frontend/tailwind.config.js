@@ -24,6 +24,7 @@ module.exports = {
     fontFamily: {
       heading: ["Autom"],
       sub: ["Fira Code"],
+      firaMedium: ["Fira Code Medium"],
       button: ["Upheavel"],
       montserrat : ['Montserrat' , 'sans-serif'],
     },
@@ -38,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         'fira-code': ['Fira Code', 'monospace'],
+        'fira-code-2': ['Fira Code Medium', 'monospace'],
         'Autom': ['Autom', 'sans-serif'],
         'Minecraftia': ['Minecraftia', 'sans-serif'],
       },
