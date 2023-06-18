@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <nav className="w-full sticky top-0 px-2 pt-2">
+    <nav className="w-full sticky top-0 px-2 pt-2 bg-background">
       <div className="container mx-auto  flex justify-between h-8 lg:h-12">
-        <Image
-          src={"/images/Logo_dark_white.png"}
-          width={200}
-          height={50}
-          className="  w-auto h-full"
-        />
+        <Link href="/">
+          <Image
+            src={"/images/Logo_dark_white.png"}
+            width={200}
+            height={50}
+            className="  w-auto h-full"
+          />
+        </Link>
 
         <div className="h-full bg-main px-6 py-2 grid place-content-center  text-black  font-heading text-sm lg:text-base">
           <div className="flex items-base gap-2">

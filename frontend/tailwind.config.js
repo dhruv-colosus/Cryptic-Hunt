@@ -26,6 +26,7 @@ module.exports = {
       sub: ["var(--font-fira-code)"],
       button: ["var(--font-upheaval)"],
       montserrat: ["var(--font-montserrat)"],
+      minecraftia: ["var(--font-minecraftia)"],
     },
     extend: {
       backgroundImage: {
