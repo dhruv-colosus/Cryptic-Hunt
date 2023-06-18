@@ -12,6 +12,11 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'fira-code': ['Fira Code', 'monospace'],
+        'Autom': ['Autom', 'sans-serif'],
+        'Minecraftia': ['Minecraftia', 'sans-serif'],
+      },
     },
   },
   plugins: [],
