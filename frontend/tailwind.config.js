@@ -37,6 +37,12 @@ module.exports = {
       colors: {
         main: "#00C29A",
       },
+      fontFamily: {
+        'fira-code': ['Fira Code', 'monospace'],
+        'fira-code-2': ['Fira Code Medium', 'monospace'],
+        'Autom': ['Autom', 'sans-serif'],
+        'Minecraftia': ['Minecraftia', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -23,6 +23,10 @@
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Fira Code Medium";
+  src: url("/fonts/FiraCode-Medium.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Automs";
@@ -33,6 +37,12 @@
   font-family: "Upheavel";
   src: url("/fonts/UpheavalPro.ttf") format("truetype");
 } */
+
+/* @font-face {
+  font-family: "Minecraftia";
+  src: url("/fonts/Minecraftia-Regular.ttf") format("truetype");
+} */
+
 
 body {
   color: rgb(var(--foreground-rgb));
