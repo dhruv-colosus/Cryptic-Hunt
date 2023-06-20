@@ -137,7 +137,6 @@ const getQuestion = asyncHandler(async (req, res) => {
 const checkQuestion = asyncHandler(async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
-    console.log(user);
 
     if (user) {
       const { answer } = req.body;
@@ -218,6 +217,30 @@ const leaderboard = asyncHandler(async (req, res) => {
   }
 });
 
+const secretupdate = asyncHandler(async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ message: "User Do Not Exists- Please Login Again" });
+    }
+
+    res.status(201).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      username: user.username,
+      level: user.level,
+      score: user.score,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = {
   createUser,
   verifyUser,
@@ -226,4 +249,5 @@ module.exports = {
   checkQuestion,
   leaderboard,
   levelUp,
+  secretupdate,
 };
