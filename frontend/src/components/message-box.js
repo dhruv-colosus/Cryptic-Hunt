@@ -9,7 +9,11 @@ const MessageBox = () => {
   return (
     <div
       className={` absolute z-3 top-0 right-0 m-4 bg-background border-3 border-main min-w-[18rem] text-center  max-w-max w-[50%] p-3 flex flex-col
-     ${error ? "opacity-100" : "opacity-0"}
+     ${
+       error
+         ? "opacity-100 pointer-events-auto"
+         : "opacity-0 pointer-events-none"
+     }
     `}
     >
       <button
