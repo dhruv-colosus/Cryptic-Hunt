@@ -6,7 +6,7 @@ export default function Home() {
     <>
       {/* body */}
 
-      <div className="sticky top-0 bg-[#OBOBOB] h-fit py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
+      <div className="sticky top-32 bg-[#OBOBOB] h-auto py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
         <div className="flex flex-col items-center">
           {/* main heading */}
           <div>
