@@ -9,10 +9,10 @@ const Side_button = () => {
   const [rules1, setRules1] = useState(" top-[-300vh]");
   const [rules2, setRules2] = useState(" hidden");
   const rulesRule = () => {
-    if (rules1 === " top-[-300vh]") {
+    if (rules2 === " hidden") {
       setRules2(" initial");
       setRules1(" top-[-80vh] py-24");
-    } else if (rules1 === " top-[-80vh] py-24") {
+    } else if (rules2 === " initial") {
       setRules1(" top-[-300vh]");
       setRules2(" hidden");
     }
