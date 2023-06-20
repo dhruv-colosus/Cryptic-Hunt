@@ -1,12 +1,15 @@
+"use client";
+
+
 export const Rulebook = (props) => {
     return (
         <div
             className={
-                "flex transition-all duration-1000 py-20 z-20 relative w-full h-fit bg-black bg-opacity-25 backdrop-blur-sm justify-center items-center" +
-                props.rules1
+                "bottom-[-100vh] flex transition-all duration-1000 z-20 sticky w-full h-max bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
+                props.rules1 + props.rules2
             }
         >
-            <div className="relative w-11/12 pb-20 bg-[#0B0B0B] flex flex-col justify-center items-center border-3 border-[#00C29A]">
+            <div className="relative w-11/12 pb-20 bg-[#0b0b0b00] flex flex-col justify-center items-center border-3 border-[#00C29A]">
                 <h1 className="flex justify-center items-center text-[#00C29A] text-center font-Autom text-5xl md:text-6xl m-20 mb-10">
                     Rulebook
                 </h1>
