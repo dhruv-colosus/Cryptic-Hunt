@@ -1,3 +1,4 @@
+import Providers from "@/components/provider";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
@@ -43,7 +44,7 @@ export default function RootLayout({ children }) {
         ${montserrat.variable} ${firaCode.variable} ${upheavel.variable} ${autom.variable} ${minecraftia.variable}
       `}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
