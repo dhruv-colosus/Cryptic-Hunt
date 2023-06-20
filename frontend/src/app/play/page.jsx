@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import Side_button from "@/components/side_button";
 
 export default function Questions() {
   return (
@@ -36,6 +37,7 @@ export default function Questions() {
           </div>
         </div>
       </div>
+      <Side_button></Side_button>
     </>
   );
 }
