@@ -5,7 +5,7 @@ export const Rulebook = (props) => {
     return (
         <div
             className={
-                "bottom-[-100vh] flex transition-all duration-1000 z-20 sticky w-full h-max bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
+                "bottom-[-90vh] flex transition-all duration-1000 z-20 sticky w-full h-max bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
                 props.rules1 + props.rules2
             }
         >
