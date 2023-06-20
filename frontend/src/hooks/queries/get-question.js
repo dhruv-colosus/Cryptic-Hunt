@@ -22,7 +22,12 @@ export const useQuestionQuery = () => {
         },
       });
 
-      return res.json();
+      let parsedData = await res.json();
+      if (!res.ok) {
+        throw new Error(parsedData.message || "Something went wrong.");
+      }
+
+      return parsedData;
     },
   });
 };

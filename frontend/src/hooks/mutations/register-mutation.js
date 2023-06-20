@@ -20,11 +20,13 @@ export const useRegisterMutation = () => {
         body: JSON.stringify(parsedData),
       });
 
+      let responseData = await response.json();
+
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(responseData.message);
       }
 
-      const user = createUserSchema.parse(await response.json());
+      const user = createUserSchema.parse(responseData);
       return user;
     },
     onSuccess: (data) => {

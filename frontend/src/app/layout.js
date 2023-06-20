@@ -2,6 +2,7 @@ import Providers from "@/components/provider";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
+import MessageBox from "@/components/message-box";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
       `}
       >
         <Providers>{children}</Providers>
+        <MessageBox />
       </body>
     </html>
   );

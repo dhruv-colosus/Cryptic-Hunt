@@ -1,6 +1,7 @@
 "use client";
 
 import { useAtom } from "jotai";
+import { errorAtom } from "@/atoms/error";
 import { useQuestionQuery } from "@/hooks/queries/get-question";
 import { useUserQuery } from "@/hooks/queries/user-query";
 import { useCheckQuestionMutation } from "@/hooks/mutations/check-mutation";
@@ -9,6 +10,7 @@ export const QuestionBlock = () => {
   const questionQuery = useQuestionQuery();
   const userQuery = useUserQuery();
   const checkQuestionMutation = useCheckQuestionMutation();
+  const [, setError] = useAtom(errorAtom);
 
   if (!userQuery.data) {
     return null;
@@ -59,7 +61,10 @@ export const QuestionBlock = () => {
       { answer },
       {
         onError: (error) => {
-          alert(error.message);
+          setError({
+            title: "Answer Failed",
+            message: error.message,
+          });
         },
       }
     );
