@@ -1,24 +1,29 @@
 "use client";
 
-import { userAtom } from "@/atoms/user";
-import { useAtom } from "jotai";
 import { useRouter } from "next/navigation";
-
+import { useUserQuery } from "@/hooks/queries/user-query";
 import { useEffect } from "react";
 
 export const Protected = (props) => {
-  const [user] = useAtom(userAtom);
+  const userQuery = useUserQuery();
   const router = useRouter();
 
   useEffect(() => {
-    const wait = setTimeout(() => {
-      if (!user) {
-        router.push("/login");
-      }
-    }, 100);
+    if (userQuery.data) {
+      return;
+    }
 
-    return () => clearTimeout(wait);
-  }, [user]);
+    if (userQuery.isLoading) {
+      return;
+    }
+
+    if (userQuery.isError) {
+      router.push("/login");
+      return;
+    }
+
+    router.push("/login");
+  }, [userQuery.data, userQuery.isLoading, userQuery.isError]);
 
   return <>{props.children}</>;
 };

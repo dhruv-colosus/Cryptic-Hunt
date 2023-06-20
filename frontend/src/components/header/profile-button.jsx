@@ -1,16 +1,33 @@
 "use client";
 
-import { userAtom } from "@/atoms/user";
-import { useAtom } from "jotai";
+import { useUserQuery } from "@/hooks/queries/user-query";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const ProfileButton = () => {
-  const [user] = useAtom(userAtom);
+  const userQuery = useUserQuery();
+  const router = useRouter();
+
+  if (userQuery.isLoading) {
+    return null;
+  }
+
+  const user = userQuery.data;
 
   return (
-    <div className="h-full bg-main px-6 py-2 grid place-content-center  text-black  font-heading text-sm md:text-base">
+    <button
+      onClick={() => {
+        if (user == null) {
+          router.push("/login");
+        } else {
+          router.push("/profile");
+        }
+      }}
+      className="h-full bg-main px-6 py-2 grid place-content-center  text-black  font-heading text-sm md:text-base"
+    >
       <div className="flex items-base gap-2">
-        {user !== null ? (
+        {user != null ? (
           <>
             <Image
               src="/images/default-user-profile.png"
@@ -19,13 +36,13 @@ export const ProfileButton = () => {
               className="h-4 md:h-5 w-auto"
               alt="profile"
             />
-            <span>{firstWord(user?.name)}</span>{" "}
+            <span>{firstWord(user?.name)}</span>
           </>
         ) : (
-          <span>Log In</span>
+          <span href={"/login"}>Log In</span>
         )}
       </div>
-    </div>
+    </button>
   );
 };
 

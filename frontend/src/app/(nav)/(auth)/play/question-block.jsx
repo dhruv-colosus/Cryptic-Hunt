@@ -1,16 +1,20 @@
 "use client";
 
 import { useAtom } from "jotai";
-import { userAtom } from "@/atoms/user";
 import { useQuestionQuery } from "@/hooks/queries/get-question";
+import { useUserQuery } from "@/hooks/queries/user-query";
+import { useCheckQuestionMutation } from "@/hooks/mutations/check-mutation";
 
 export const QuestionBlock = () => {
-  const [user] = useAtom(userAtom);
   const questionQuery = useQuestionQuery();
+  const userQuery = useUserQuery();
+  const checkQuestionMutation = useCheckQuestionMutation();
 
-  if (!user) {
+  if (!userQuery.data) {
     return null;
   }
+
+  const user = userQuery.data;
 
   return (
     <div className="bg-[#181717] w-3/4 flex flex-col sm:flex-row justify-center items-start py-10 md:py-20 md:pr-16 md:pl-6 ">
@@ -51,6 +55,13 @@ export const QuestionBlock = () => {
     e.preventDefault();
     let answer = e.target.answer.value;
 
-    console.log(answer);
+    checkQuestionMutation.mutate(
+      { answer },
+      {
+        onError: (error) => {
+          alert(error.message);
+        },
+      }
+    );
   }
 };

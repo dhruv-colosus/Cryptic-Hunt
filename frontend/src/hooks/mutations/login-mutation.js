@@ -26,7 +26,7 @@ export const useLoginMutation = () => {
     },
 
     onSuccess: (data) => {
-      logInUser(data);
+      logInUser(data.token);
     },
   });
 };

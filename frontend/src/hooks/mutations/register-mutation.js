@@ -28,7 +28,7 @@ export const useRegisterMutation = () => {
       return user;
     },
     onSuccess: (data) => {
-      logInUser(data);
+      logInUser(data.token);
     },
   });
 };
