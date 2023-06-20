@@ -39,10 +39,10 @@ module.exports = {
         main: "#00C29A",
       },
       fontFamily: {
-        "fira-code": ["Fira Code", "monospace"],
+        "fira-code": ["var(--font-fira-code)"],
         "fira-code-2": ["Fira Code Medium", "monospace"],
-        Autom: ["Autom", "sans-serif"],
-        Minecraftia: ["Minecraftia", "sans-serif"],
+        Autom: ["var(--font-autom)"],
+        Minecraftia: ["var(--font-minecraftia)"],
       },
     },
   },

@@ -15,7 +15,7 @@ export const Protected = (props) => {
       if (!user) {
         router.push("/login");
       }
-    }, 1000);
+    }, 100);
 
     return () => clearTimeout(wait);
   }, [user]);

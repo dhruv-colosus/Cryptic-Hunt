@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import { PlayButton } from "@/components/play-btn";
 import Side_button from "@/components/side_button";
-
 
 export default function Home() {
   return (
@@ -34,25 +32,8 @@ export default function Home() {
           {/* under heading ends */}
 
           {/* play button */}
-          <div className="bg-[#00C29A]">
-            {/* <a
-              href="#"
-              className=" hover:bg-background hover:text-main hover:border-main"
-            >
-              <div className="py-2 px-12 ">
-                <h2 className="text-[#OBOBOB] font-bold font-heading text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl transition-all duration-300 ">
-                  PLAY
-                </h2>
-              </div>
-            </a> */}
-            <button
-              type="submit"
-              className="font-bold font-heading text-xl block text-center outline-none bg-main text-white cursor-pointer transition  duration-300
-                sm:py-2 py-1 sm:px-12 px-10 border-2 border-main hover:bg-background hover:text-main
-                 onClick={login}"
-            >
-              Play
-            </button>
+          <div className="">
+            <PlayButton />
           </div>
           {/* play button ends */}
         </div>
@@ -61,10 +42,9 @@ export default function Home() {
 
       {/* side buttons */}
 
-      <Side_button/>
+      <Side_button />
 
       {/* side buttons end */}
-
     </div>
   );
 }
