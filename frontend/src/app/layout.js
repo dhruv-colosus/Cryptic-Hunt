@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark ">
       <body
-        className={`bg-background
+        className={`bg-background no-scrollbar
         ${montserrat.variable} ${firaCode.variable} ${upheavel.variable} ${autom.variable} ${minecraftia.variable}
       `}
       >
