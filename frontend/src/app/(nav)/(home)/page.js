@@ -3,10 +3,10 @@ import Side_button from "@/components/side_button";
 
 export default function Home() {
   return (
-    <div>
+    <>
       {/* body */}
 
-      <div className="bg-[#OBOBOB] h-full my-[30vh] sm:mt-44 md:mt-44 lg:mt-44 xl:mt-44 transition-all duration-300">
+      <div className="sticky top-0 bg-[#OBOBOB] h-fit py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
         <div className="flex flex-col items-center">
           {/* main heading */}
           <div>
@@ -45,6 +45,6 @@ export default function Home() {
       <Side_button />
 
       {/* side buttons end */}
-    </div>
+    </>
   );
 }
