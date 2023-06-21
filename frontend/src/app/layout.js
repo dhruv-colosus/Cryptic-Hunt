@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark ">
       <body
-        className={`bg-background overflow-clip
+        className={`bg-background overflow-x-clip no-scrollbar
         ${montserrat.variable} ${firaCode.variable} ${upheavel.variable} ${autom.variable} ${minecraftia.variable}
       `}
       >

@@ -3,7 +3,7 @@
 import MessageBox from "@/components/message-box";
 import { PlayButton } from "@/components/play-btn";
 import Side_button from "@/components/side_button";
-import { useRef, useEffect, useState } from "react";
+// import { useRef, useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { errorAtom } from "@/atoms/error";
 
@@ -11,7 +11,7 @@ export default function Home() {
 
     const [error, setError] = useAtom(errorAtom);
     const showMessage=()=>{setError({title:"LOL", message:"lolololololol"});  setTimeout(hideMessage, 10000)}
-    const hideMessage=()=>{setError(null)}
+    async function hideMessage(){setError(null)}
     return (
         <>
             <MessageBox error={error} hideMessage={hideMessage} showMessage={showMessage} />
