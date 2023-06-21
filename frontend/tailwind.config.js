@@ -20,6 +20,7 @@ module.exports = {
       white: "#FFFFFF",
       main: "#00C29",
       black: "#000000",
+      danger: "#F45050",
     },
     fontFamily: {
       heading: ["var(--font-autom)"],
@@ -38,10 +39,10 @@ module.exports = {
         main: "#00C29A",
       },
       fontFamily: {
-        'fira-code': ['Fira Code', 'monospace'],
-        'fira-code-2': ['Fira Code Medium', 'monospace'],
-        'Autom': ['Autom', 'sans-serif'],
-        'Minecraftia': ['Minecraftia', 'sans-serif'],
+        "fira-code": ["var(--font-fira-code)"],
+        "fira-code-2": ["Fira Code Medium", "monospace"],
+        Autom: ["var(--font-autom)"],
+        Minecraftia: ["var(--font-minecraftia)"],
       },
     },
   },

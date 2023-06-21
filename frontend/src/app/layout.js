@@ -1,6 +1,8 @@
+import Providers from "@/components/provider";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
+import MessageBox from "@/components/message-box";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -43,7 +45,8 @@ export default function RootLayout({ children }) {
         ${montserrat.variable} ${firaCode.variable} ${upheavel.variable} ${autom.variable} ${minecraftia.variable}
       `}
       >
-        {children}
+        <Providers>{children}</Providers>
+        <MessageBox />
       </body>
     </html>
   );
