@@ -1,22 +1,26 @@
 "use client";
 
-import Message_box from "@/components/message_box";
+import MessageBox from "@/components/message-box";
 import { PlayButton } from "@/components/play-btn";
 import Side_button from "@/components/side_button";
 import { useRef, useEffect, useState } from "react";
+import { useAtom } from "jotai";
+import { errorAtom } from "@/atoms/error";
 
 export default function Home() {
-    const [show, setShow] = useState(" invisible right-[-100%]");
+    // const [show, setShow] = useState(" invisible right-[-100%]");
     // const showRef = useRef(" invisible right-[-100%]");
     // showRef.current = " invisible right-[-100%]";
     // const showMessage=()=>{show === " visible right-0" ? setShow(" invisible right-[-100%]") : setShow(" visible right-0")}
     // const showMessage=()=>{show === " visible right-0" ? setShow(" invisible right-[-100%]") : ()=>{setShow(" visible right-0"), setTimeout(hideMessage, 3000)}}
-    const showMessage=()=>{setShow(" visible right-0");  setTimeout(hideMessage, 5000)}
-    const hideMessage=()=>{setShow(" invisible right-[-100%]")}
+    // const showMessage=()=>{setShow(" visible right-0");  setTimeout(hideMessage, 5000)}
+    // const hideMessage=()=>{setShow(" invisible right-[-100%]")}
+    const [error, setError] = useAtom(errorAtom);
+    const showMessage=()=>{setError({title:"LOL", message:"lolololololol"});  setTimeout(hideMessage, 10000)}
+    const hideMessage=()=>{setError(null)}
     return (
         <>
-            <Message_box show={show} />
-
+            <MessageBox error={error} hideMessage={hideMessage} showMessage={showMessage} />
             {/* body */}
             <div className="fixed w-full top-0 bg-[#OBOBOB] h-fit py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
                 <div className="flex flex-col items-center">
