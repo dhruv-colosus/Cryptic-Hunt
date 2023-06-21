@@ -4,7 +4,6 @@ import { useAtom } from "jotai";
 import { errorAtom } from "@/atoms/error";
 
 const MessageBox = (props) => {
-  // const [error, setError] = useAtom(errorAtom);
 
   return (
     <div

@@ -8,13 +8,7 @@ import { useAtom } from "jotai";
 import { errorAtom } from "@/atoms/error";
 
 export default function Home() {
-    // const [show, setShow] = useState(" invisible right-[-100%]");
-    // const showRef = useRef(" invisible right-[-100%]");
-    // showRef.current = " invisible right-[-100%]";
-    // const showMessage=()=>{show === " visible right-0" ? setShow(" invisible right-[-100%]") : setShow(" visible right-0")}
-    // const showMessage=()=>{show === " visible right-0" ? setShow(" invisible right-[-100%]") : ()=>{setShow(" visible right-0"), setTimeout(hideMessage, 3000)}}
-    // const showMessage=()=>{setShow(" visible right-0");  setTimeout(hideMessage, 5000)}
-    // const hideMessage=()=>{setShow(" invisible right-[-100%]")}
+
     const [error, setError] = useAtom(errorAtom);
     const showMessage=()=>{setError({title:"LOL", message:"lolololololol"});  setTimeout(hideMessage, 10000)}
     const hideMessage=()=>{setError(null)}
