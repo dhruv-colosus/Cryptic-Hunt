@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { useRegisterMutation } from "@/hooks/mutations/register-mutation";
 import { useRouter } from "next/navigation";
 import { NotLoggedIn } from "@/components/not-logged-in";
+import { useAtom } from "jotai";
+import { errorAtom } from "@/atoms/error";
+import MessageBox from "@/components/message-box";
 
 export default function Login() {
   const {
@@ -12,11 +15,18 @@ export default function Login() {
   } = useForm();
   const registerUserMutation = useRegisterMutation();
   const router = useRouter();
+  const [, setError] = useAtom(errorAtom);
 
   const registerUser = (data) => {
     registerUserMutation.mutate(data, {
       onSuccess: (data) => {
         router.replace("/");
+      },
+      onError: (error) => {
+        setError({
+          title: "Registration Failed",
+          message: error.message,
+        });
       },
     });
   };

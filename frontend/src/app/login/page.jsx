@@ -5,6 +5,9 @@ import { useForm } from "react-hook-form";
 import { loginPostObjSchema } from "../types";
 import { useRouter } from "next/navigation";
 import { NotLoggedIn } from "@/components/not-logged-in";
+import MessageBox from "@/components/message-box";
+import { useAtom } from "jotai";
+import { errorAtom } from "@/atoms/error";
 
 export default function Login() {
   const {
@@ -22,8 +25,16 @@ export default function Login() {
         console.log(data);
         router.replace("/");
       },
+      onError: (error) => {
+        setError({
+          title: "Login Failed",
+          message: error.message,
+        });
+      },
     });
   };
+
+  const [error, setError] = useAtom(errorAtom);
 
   return (
     <NotLoggedIn>

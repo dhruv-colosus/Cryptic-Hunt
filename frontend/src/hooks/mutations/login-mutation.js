@@ -18,11 +18,13 @@ export const useLoginMutation = () => {
         body: JSON.stringify(data),
       });
 
+      let responseData = await response.json();
+
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(responseData.message);
       }
 
-      return await response.json();
+      return responseData;
     },
 
     onSuccess: (data) => {
