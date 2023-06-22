@@ -11,7 +11,6 @@ export const Header = () => {
             src={"/images/Logo_dark_white.png"}
             width={200}
             height={50}
-            alt="devcomm logo"
             className="  w-auto h-full "
           />
         </Link>
@@ -22,7 +21,6 @@ export const Header = () => {
               src={"/images/mail.png"}
               width={30}
               height={30}
-              alt="mail icon"
               className="h-4 md:h-5 w-auto"
             />
 

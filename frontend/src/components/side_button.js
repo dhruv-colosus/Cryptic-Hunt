@@ -6,17 +6,20 @@ import { useState } from "react";
 import { Rulebook } from "./Rulebook";
 
 const Side_button = () => {
+  const [rules1, setRules1] = useState(" top-[-300vh]");
   const [rules2, setRules2] = useState(" hidden");
   const rulesRule = () => {
     if (rules2 === " hidden") {
       setRules2(" initial");
+      setRules1(" top-[-80vh] py-24");
     } else if (rules2 === " initial") {
+      setRules1(" top-[-300vh]");
       setRules2(" hidden");
     }
   };
   return (
     <>
-      <Rulebook rules2={rules2} rulesRule={rulesRule} />
+      <Rulebook rules1={rules1} rules2={rules2} rulesRule={rulesRule} />
       <div className="mt-[6vw] mx-4 mb-4 fixed bottom-0 right-0 cursor-pointer">
         <div className="flex flex-col items-end">
           <div className="py-1" onClick={rulesRule}>
