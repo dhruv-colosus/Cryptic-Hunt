@@ -5,8 +5,8 @@ export const Rulebook = (props) => {
     return (
         <div
             className={
-                "py-32 bottom-[-90vh] flex transition-all duration-1000 z-20 sticky w-full h-full bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
-                 props.rules2
+                "py-24 bottom-[-100vh] flex transition-all duration-1000 z-20 sticky w-full h-max bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
+                props.rules2
             }
         >
             <div className="relative w-11/12 pb-20 bg-[#0b0b0b00] flex flex-col justify-center items-center border-3 border-[#00C29A]">
