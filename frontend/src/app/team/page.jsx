@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import {FaCrown} from "react-icons/fa"
+import Side_button from "@/components/side_button";
+
 
 export default function Team(){
 
@@ -11,6 +13,7 @@ export default function Team(){
     }
 
     return(
+        <>
         <div className="flex justify-center items-center h-screen bg-background">
         <div className="w-192">
             <h1 className="sm:text-5xl text-3xl block text-center font-heading text-main">Team Name</h1>
@@ -30,7 +33,8 @@ export default function Team(){
                 </div>
         </div>
         </div>
-        
+        <Side_button />
     </div>
+    </>
     );
 }
