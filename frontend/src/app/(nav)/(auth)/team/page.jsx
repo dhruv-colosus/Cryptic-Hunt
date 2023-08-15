@@ -18,6 +18,26 @@ export default function Team() {
   const kickUserMutation = useKickUserMutation();
   const disbandTeamMutation = useDisbandTeamMutation();
 
+  const handleDisbandClick = async () => {
+    const shouldDisband = window.confirm(
+      `Are you sure you want to Disband team ${teamData.name}`
+    );
+
+    if (shouldDisband) {
+      disbandTeamMutation.mutate({ teamId: teamData._id });
+    }
+  };
+
+  const handleKick = async () => {
+    const shouldDisbandd = window.confirm(`Are you sure you want to kick HIM`);
+
+    if (shouldDisbandd) {
+      kickUserMutation.mutate({
+        teamId: teamData._id,
+        memberId: member._id,
+      });
+    }
+  };
   useEffect(() => {
     if (isError) {
       setError({
@@ -65,12 +85,7 @@ export default function Team() {
                     ) : user._id === teamData.teamOwner ? (
                       <div className="sm:text-lg sm:ml-52 ml-24 text-base text-sub ">
                         <button
-                          onClick={async () => {
-                            kickUserMutation.mutate({
-                              teamId: teamData._id,
-                              memberId: member._id,
-                            });
-                          }}
+                          onClick={handleKick}
                           disabled={
                             member._id === teamData.teamOwner ||
                             kickUserMutation.isLoading
@@ -90,9 +105,10 @@ export default function Team() {
           {teamData.teamOwner === user._id && (
             <div className="w-full flex ">
               <button
-                onClick={async () => {
-                  disbandTeamMutation.mutate({ teamId: teamData._id });
-                }}
+                // onClick={async () => {
+                //   disbandTeamMutation.mutate({ teamId: teamData._id });
+                // }}
+                onClick={handleDisbandClick}
                 disabled={disbandTeamMutation.isLoading}
                 className="bg-danger px-4 py-2 rounded-md font-minecraftia mx-auto self-center"
               >
