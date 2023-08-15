@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 
@@ -9,6 +10,13 @@ const cors = require("cors");
 
 const { connectToMongoDB } = require("./db");
 require("dotenv").config();
+
+const limiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 300, // Limit each IP to 300 requests per windowMs
+});
+
+app.use(limiter);
 
 app.use(cors());
 
