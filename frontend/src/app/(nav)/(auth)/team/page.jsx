@@ -101,8 +101,8 @@ export default function Team() {
             </div>
           )}
         </div>
-        <Side_button />
       </div>
+      <Side_button />
     </>
   );
 }

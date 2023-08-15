@@ -24,7 +24,7 @@ export default function Login() {
 
   return (
     <div className="flex justify-center items-center bg-background">
-      <div className="w-full max-w-4xl mx-auto  p-6">
+      <div className="w-full max-w-4xl mx-auto mt-32 p-6">
         <h1 className="sm:text-5xl text-3xl block text-center font-heading text-main">
           Profile
         </h1>

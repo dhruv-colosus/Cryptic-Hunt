@@ -4,7 +4,7 @@ export const Rulebook = (props) => {
   return (
     <div
       className={
-        "py-32 bottom-[-90vh] flex transition-all duration-1000 z-20 sticky w-full h-full bg-black bg-opacity-25 backdrop-blur-md justify-center items-center" +
+        "py-32 bottom-[-90vh] flex transition-all duration-1000 z-32 sticky w-full h-full bg-black bg-opacity-25 backdrop-blur-md justify-center items-center  " +
         props.rules2
       }
     >
