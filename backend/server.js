@@ -18,7 +18,11 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 const mainRoute = require("./routes/mainRoute");
 const questionRoute = require("./routes/questionRoute");

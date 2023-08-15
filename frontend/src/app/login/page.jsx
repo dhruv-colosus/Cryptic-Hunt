@@ -22,7 +22,6 @@ export default function Login() {
   const login = (data) => {
     loginMutation.mutate(loginPostObjSchema.parse(data), {
       onSuccess: (data) => {
-        console.log(data);
         router.replace("/");
       },
       onError: (error) => {
