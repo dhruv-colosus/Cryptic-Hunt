@@ -211,7 +211,7 @@ const leaderboard = asyncHandler(async (req, res) => {
       score: user.score,
     }));
     res.json(formattedUsers);
-  } catch {
+  } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
   }
