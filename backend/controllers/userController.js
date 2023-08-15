@@ -235,6 +235,7 @@ const secretupdate = asyncHandler(async (req, res) => {
       username: user.username,
       level: user.level,
       score: user.score,
+      teamId: user.teamId,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

@@ -15,6 +15,8 @@ app.use(cors());
 const mainRoute = require("./routes/mainRoute");
 const questionRoute = require("./routes/questionRoute");
 const teamRoute = require("./routes/teamRoute");
+const Team = require("./models/teamModel");
+const User = require("./models/userModel");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
