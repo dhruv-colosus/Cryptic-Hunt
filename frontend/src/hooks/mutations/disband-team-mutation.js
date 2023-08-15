@@ -7,8 +7,19 @@ import { useRouter } from "next/navigation";
 
 export function useDisbandTeamMutation() {
   let userToken = useAtom(userTokenAtom)[0];
-  userToken =
-    userToken || localStorage.getItem(getLocalStorageKey("userToken"));
+  // userToken =
+  //   userToken || localStorage.getItem(getLocalStorageKey("userToken"));
+  let localStorageToken;
+
+  // Check if we're in a browser environment before using localStorage
+  if (typeof window !== "undefined") {
+    localStorageToken = JSON.parse(
+      localStorage.getItem(getLocalStorageKey("userToken"))
+    );
+  }
+
+  // Use the userToken from Jotai if available, otherwise use localStorageToken
+  userToken = userToken || localStorageToken;
 
   const router = useRouter();
   const [, setError] = useAtom(errorAtom);

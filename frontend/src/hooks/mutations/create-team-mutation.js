@@ -5,9 +5,21 @@ import { useAtom } from "jotai";
 
 export function useCreateTeamMutation() {
   let [userToken] = useAtom(userTokenAtom);
-  userToken =
-    userToken ||
-    JSON.parse(localStorage.getItem(getLocalStorageKey("userToken")));
+  // userToken =
+  //   userToken ||
+  //   JSON.parse(localStorage.getItem(getLocalStorageKey("userToken")));
+
+  let localStorageToken;
+
+  // Check if we're in a browser environment before using localStorage
+  if (typeof window !== "undefined") {
+    localStorageToken = JSON.parse(
+      localStorage.getItem(getLocalStorageKey("userToken"))
+    );
+  }
+
+  // Use the userToken from Jotai if available, otherwise use localStorageToken
+  userToken = userToken || localStorageToken;
 
   return useMutation({
     mutationKey: ["createTeam"],

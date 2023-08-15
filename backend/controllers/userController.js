@@ -197,7 +197,7 @@ const addQuestion = asyncHandler(async (req, res) => {
       res.status(400);
       throw new Error("User Not Found");
     }
-  } catch {
+  } catch (error) {
     res.status(500).json({ message: error.message });
     throw error;
   }

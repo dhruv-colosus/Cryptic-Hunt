@@ -5,9 +5,23 @@ import { BACKEND_URL, getLocalStorageKey } from "@/config";
 
 export const useUserQuery = () => {
   let [userToken] = useAtom(userTokenAtom);
-  userToken =
-    userToken ||
-    JSON.parse(localStorage.getItem(getLocalStorageKey("userToken")));
+
+  // userToken =
+  //   userToken ||
+  //   JSON.parse(localStorage.getItem(getLocalStorageKey("userToken")));
+
+  let localStorageToken;
+
+  // Check if we're in a browser environment before using localStorage
+  if (typeof window !== "undefined") {
+    localStorageToken = JSON.parse(
+      localStorage.getItem(getLocalStorageKey("userToken"))
+    );
+  }
+
+  // Use the userToken from Jotai if available, otherwise use localStorageToken
+  userToken = userToken || localStorageToken;
+
   return useQuery({
     queryKey: ["user", userToken],
     queryFn: async (params) => {
