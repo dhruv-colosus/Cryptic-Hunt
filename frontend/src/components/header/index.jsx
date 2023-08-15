@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProfileButton } from "./profile-button";
+import { TeamButton } from "./team-butotn";
 
 export const Header = () => {
   return (
@@ -29,6 +30,7 @@ export const Header = () => {
             </div>
           </div>
           <ProfileButton />
+          <TeamButton />
         </div>
       </div>
     </nav>
