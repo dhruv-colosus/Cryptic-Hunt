@@ -12,7 +12,7 @@ export default function Home() {
           <div>
             <div>
               <h1 className="text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">
-                CRYPTIC HUNT
+                XEROCRYPT
               </h1>
             </div>
           </div>

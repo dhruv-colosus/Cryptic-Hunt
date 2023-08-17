@@ -9,9 +9,10 @@ export const Header = () => {
       <div className="container mx-auto  flex justify-between h-6 md:h-10">
         <Link href="/">
           <Image
-            src={"/images/Logo_dark_white.png"}
-            width={200}
-            height={50}
+            src={"/images/DevcommXCB_logo.png"}
+            width={800}
+            height={200}
+            quality={100}
             className="  w-auto h-full "
           />
         </Link>
