@@ -18,7 +18,7 @@ export const Header = () => {
         </Link>
 
         <div className="flex items-center gap-2 h-full">
-          <div className="h-full aspect-square bg-main grid place-content-center relative">
+          {/* <div className="h-full aspect-square bg-main grid place-content-center relative">
             <Image
               src={"/images/mail.png"}
               width={30}
@@ -29,7 +29,7 @@ export const Header = () => {
             <div className="absolute top-0 right-0 w-4 h-4 bg-red-500 rounded-full flex justify-center items-center text-xs text-white">
               1
             </div>
-          </div>
+          </div> */}
           <ProfileButton />
           <TeamButton />
         </div>
