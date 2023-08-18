@@ -2,7 +2,7 @@
 import { useLoginMutation } from "@/hooks/mutations/login-mutation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { loginPostObjSchema } from "../types";
+import { loginPostObjSchema } from "../../types";
 import { useRouter } from "next/navigation";
 import { NotLoggedIn } from "@/components/not-logged-in";
 import MessageBox from "@/components/message-box";
@@ -37,10 +37,10 @@ export default function Login() {
 
   return (
     <NotLoggedIn>
-      <div className="flex justify-center items-center h-screen bg-background">
+      <div className="flex justify-center items-center mt-32 bg-background">
         <form onSubmit={handleSubmit(login)}>
           <div className="w-96 p-6">
-            <h1 className="sm:text-5xl text-3xl block text-center font-heading text-main">
+            <h1 className="sm:text-5xl text-3xl block text-center  font-heading text-main">
               Login
             </h1>
             <div className="grid gap-8 mt-8">
@@ -112,7 +112,7 @@ export default function Login() {
             </div>
             <div className="mt-5 flex justify-center items-center text-center">
               <p className="text-white font-sub">
-                Don’t have an account?{" "}
+                Don’t have an account?
                 <a href="/register" className="underline">
                   SignUp
                 </a>

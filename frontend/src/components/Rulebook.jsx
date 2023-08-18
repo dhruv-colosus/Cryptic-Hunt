@@ -24,7 +24,7 @@ export const Rulebook = (props) => {
               1.
             </div>
             <div className="mx-5 py-10 w-10/12 flex flex-col justify-center items-start text-center text-[#00C29A] font-fira-code-2 text-md md:text-left md:text-lg">
-              The hunt will last for 24 hour , 26 Aug 9 AM - 27 Aug 9AM .
+              The hunt will last for 24 hours , 26 Aug 12 PM - 27 Aug 12PM .
             </div>
           </div>
           <div className="mb-5 bg-[#181717] w-full flex flex-col justify-center items-center md:flex-row">
@@ -33,8 +33,8 @@ export const Rulebook = (props) => {
             </div>
             <div className="mx-5 py-10 w-10/12 flex flex-col justify-center items-start text-center text-[#00C29A] font-fira-code-2 text-md md:text-left md:text-lg">
               The answers are case sensitive and can contain special letters but
-              are one word only. Eg : if the answerr is "ye is the goat" then
-              the correct submission would be "yeisthegoat"
+              are one word only. Eg : if the answer is "ye is the goat" then the
+              correct submission would be "yeisthegoat"
             </div>
           </div>
           <div className="mb-5 bg-[#181717] w-full flex flex-col justify-center items-center md:flex-row">
@@ -77,8 +77,8 @@ export const Rulebook = (props) => {
               7.
             </div>
             <div className="mx-5 py-10 w-10/12 flex flex-col justify-center items-start text-center text-[#00C29A] font-fira-code-2 text-md md:text-left md:text-lg">
-              The use of any unfair means will be dealt with strictly and your
-              team shall be permanently disqualified form participating
+              The use of any unfair means will be dealt strictly and your team
+              shall be permanently disqualified form participating
             </div>
           </div>
           <div className="mb-5 bg-[#181717] w-full flex flex-col justify-center items-center md:flex-row">
@@ -97,7 +97,7 @@ export const Rulebook = (props) => {
             </div>
             <div className="mx-5 py-10 w-10/12 flex flex-col justify-center items-start text-center text-[#00C29A] font-fira-code-2 text-md md:text-left md:text-lg">
               If you feel you're stuck at any point it's best to clear your head
-              and starting thinking from scratch.
+              and start thinking from scratch.
             </div>
           </div>
           <div className="mb-5 bg-[#181717] w-full flex flex-col justify-center items-center md:flex-row">
