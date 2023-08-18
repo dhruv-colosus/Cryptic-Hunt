@@ -49,7 +49,7 @@ export default function Countdown() {
       <div className="sticky top-28 bg-[#OBOBOB] h-auto py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
         <div className="flex flex-col items-center">
           <div className="mb-10 flex flex-col">
-            <h3 className="text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">KABOOM!!!</h3>
+            <h3 className="text-center text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">KABOOM!!!</h3>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function Countdown() {
       <div className="sticky top-28 bg-[#OBOBOB] h-auto py-[30vh] sm:pt-44 md:pt-44 lg:pt-44 xl:pt-44 transition-all duration-300">
         <div className="flex flex-col items-center">
           <div className="mb-10 flex flex-col">
-            <h3 className="text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">HOL UP!!!</h3>
+            <h3 className="text-center text-[#00C29A] font-heading text-5xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl transition-all duration-300">HOL UP!!!</h3>
             <span className="text-center text-[#00C29A] font-sub tracking-[0.25rem] text-[1rem] sm:text-m md:text-m lg:text-m xl:text-m transition-all duration-300">You look excited.</span>
             <span className="text-center text-[#00C29A] font-sub tracking-[0.25rem] text-[1rem] sm:text-m md:text-m lg:text-m xl:text-m transition-all duration-300">Wait till this bomb goes off.</span>
           </div>
