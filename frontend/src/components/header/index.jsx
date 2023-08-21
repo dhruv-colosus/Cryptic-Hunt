@@ -17,7 +17,7 @@ export const Header = () => {
           />
         </Link>
 
-        <div className="flex items-center gap-2 h-full">
+        <div className="flex flex-col items-end sm:flex-row sm:items-center gap-2 h-full">
           {/* <div className="h-full aspect-square bg-main grid place-content-center relative">
             <Image
               src={"/images/mail.png"}
