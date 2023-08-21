@@ -55,7 +55,7 @@ export const Rulebook = (props) => {
               Hints will be posted on the
               <a
                 className="underline"
-                href="https://discord.gg/Mm73MgPftE"
+                href="https://discord.gg/SbVgXvdTuu"
                 target="_blank"
               >
                 Discord server
