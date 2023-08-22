@@ -7,10 +7,10 @@ export default function LeaderBoardPage() {
   const leaderboardQuery = useLeaderboardQuery();
   const [page, setPage] = useState(1);
 
-  let pages = Math.ceil(leaderboardQuery.data?.length / 10);
+  let pages = Math.ceil(leaderboardQuery.data?.length / 30);
 
-  let sliceFrom = (page - 1) * 10;
-  let sliceTo = page * 10;
+  let sliceFrom = (page - 1) * 30;
+  let sliceTo = page * 30;
 
   return (
     <main className="pt-12">
@@ -92,9 +92,6 @@ const TableRow = ({ rank, username, score, idx }) => {
 };
 
 const items = [
-  { rank: "---", username: "---", score: "---" },
-  { rank: "---", username: "---", score: "---" },
-  { rank: "---", username: "---", score: "---" },
   { rank: "---", username: "---", score: "---" },
   { rank: "---", username: "---", score: "---" },
   { rank: "---", username: "---", score: "---" },
