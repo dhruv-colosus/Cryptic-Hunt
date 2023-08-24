@@ -89,7 +89,7 @@ const levelUp = asyncHandler(async (req, res) => {
 
   if (user) {
     user.level = req.body.level + 1 || user.level + 1;
-    user.score = req.body.score * 2 || (1 + user.score) * 2;
+    user.score = req.body.score * 2 || 1 + user.score;
 
     const updatedUser = await user.save();
     res.json({

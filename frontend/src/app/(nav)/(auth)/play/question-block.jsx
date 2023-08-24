@@ -25,7 +25,7 @@ export const QuestionBlock = () => {
       ) : (
         <>
           <div className="w-1/12 m-10 text-center flex justify-center items-center font-Minecraftia text-4xl md:text-6xl">
-            {user.level}.
+            {user.level === 11 ? "YAY" : user.level}.
           </div>
           <div className="w-10/12 flex flex-col justify-start items-center ">
             <div className=" pl-8 sm:pr-6 text-[#00C29A] font-fira-code-2 text-base md:text-base">
@@ -36,7 +36,7 @@ export const QuestionBlock = () => {
               className="w-full flex flex-col justify-center items-center md:flex-row md:justify-start sm:pr-6 pl-8"
             >
               <input
-                className="w-full mt-5 p-2 flex text-center font-Autom bg-[#0b0b0b00] border-4 focus:border-[#21a087] border-[#00C29A] focus-visible:outline-none focus-visible:border-5 md:w-8/12 md:mr-3 lg:w-9/12"
+                className="w-full mt-5 p-2 flex text-center font-fira-code bg-[#0b0b0b00] border-4 focus:border-[#21a087] border-[#00C29A] focus-visible:outline-none focus-visible:border-5 md:w-8/12 md:mr-3 lg:w-9/12"
                 type="text"
                 placeholder="Answer"
                 name="answer"

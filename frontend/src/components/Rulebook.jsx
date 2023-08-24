@@ -32,9 +32,10 @@ export const Rulebook = (props) => {
               2.
             </div>
             <div className="mx-5 py-10 w-10/12 flex flex-col justify-center items-start text-center text-[#00C29A] font-fira-code-2 text-md md:text-left md:text-lg">
-              The answers are case sensitive and can contain special letters but
-              are one word only. Eg : if the answer is "ye is the goat" then the
-              correct submission would be "yeisthegoat"
+              The answers are case sensitive " always lowercase " and can
+              contain special letters but are one word only. Eg : if the answer
+              is "ye is the goat" then the correct submission would be
+              "yeisthegoat"
             </div>
           </div>
           <div className="mb-5 bg-[#181717] w-full flex flex-col justify-center items-center md:flex-row">
