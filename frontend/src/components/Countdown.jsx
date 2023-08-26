@@ -56,10 +56,7 @@ export default function Countdown() {
               </div>
             </div>
           </div> */}
-          <h1 className="flex justify-center items-center text-center text-[#00C29A] font-Autom text-6xl md:text-5xl mb-8 sm:items-center">
-            RIDDLE ME THIS
-          </h1>
-          <QuestionBlock />
+
           {/* body ends */}
         </>
       ) : (
