@@ -205,7 +205,7 @@ const addQuestion = asyncHandler(async (req, res) => {
 
 const leaderboard = asyncHandler(async (req, res) => {
   try {
-    const users = await User.find().sort({ score: -1 });
+    const users = await User.find().sort({ score: -1, updatedAt: 1 });
     const formattedUsers = users.map((user) => ({
       name: user.username,
       score: user.score,

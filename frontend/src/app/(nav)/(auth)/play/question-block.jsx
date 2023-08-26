@@ -25,7 +25,7 @@ export const QuestionBlock = () => {
       ) : (
         <>
           <div className="w-1/12 m-10 text-center flex justify-center items-center font-Minecraftia text-4xl md:text-6xl">
-            {user.level === 11 ? "YAY" : user.level}.
+            {user.level === 13 ? "YAY" : user.level}.
           </div>
           <div className="w-10/12 flex flex-col justify-start items-center ">
             <div className=" pl-8 sm:pr-6 text-[#00C29A] font-fira-code-2 text-base md:text-base">
