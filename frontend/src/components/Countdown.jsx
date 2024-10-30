@@ -12,7 +12,7 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date(2023, 7, 26, 12, 0, 0, 0);
+    const target = new Date(2025, 7, 26, 12, 0, 0, 0);
 
     const interval = setInterval(() => {
       const now = new Date();

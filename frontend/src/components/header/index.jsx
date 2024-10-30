@@ -7,18 +7,10 @@ export const Header = () => {
   return (
     <nav className="w-full sticky top-0 px-2 pt-4 bg-background">
       <div className="container mx-auto  flex justify-between h-6 md:h-10">
-        <Link href="/">
-          <Image
-            src={"/images/DevcommXCB_logo.png"}
-            width={800}
-            height={200}
-            quality={100}
-            className="  w-auto h-full "
-          />
-        </Link>
+        <Link href="/"></Link>
 
         <div className="flex flex-col items-end sm:flex-row sm:items-center gap-2 h-full">
-          {/* <div className="h-full aspect-square bg-main grid place-content-center relative">
+          <div className="h-full aspect-square bg-main grid place-content-center relative">
             <Image
               src={"/images/mail.png"}
               width={30}
@@ -29,7 +21,7 @@ export const Header = () => {
             <div className="absolute top-0 right-0 w-4 h-4 bg-red-500 rounded-full flex justify-center items-center text-xs text-white">
               1
             </div>
-          </div> */}
+          </div>
           <ProfileButton />
           <TeamButton />
         </div>
